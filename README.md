@@ -1,6 +1,9 @@
 # hecc
 Furry RP app made with Ionic
 
+[(Heavily based on Javo Salazar's idea on Twitter)](https://twitter.com/javo_s_/status/1132678381307351041)
+
+
 ## Requirements
 * Git
 * Latest version of NodeJS (and npm)
