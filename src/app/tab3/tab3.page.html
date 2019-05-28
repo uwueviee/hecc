@@ -6,4 +6,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-img style="width: 80px; height: 80px;" src="{{ authService.returnLoggedInUser().picture }}"></ion-img>
+       <ion-card-title>{{ authService.returnLoggedInUser().nickname }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ authService.returnLoggedInUser().email }}</p>
+      </ion-card-content>
+    </ion-card>	
+	<button ion-button class="submit-btn" (click)="authService.logout()">Logout</button>
+</ion-content>
