@@ -14,7 +14,7 @@ export class AuthService {
     domain: 'noculi.auth0.com',
     responseType: 'token id_token',
     audience: 'https://noculi.auth0.com/userinfo',
-    redirectUri: 'http://localhost:8100/callback',
+    redirectUri: window.location.protocol+ '//' + window.location.hostname + ':' + window.location.port + '/callback',
     scope: 'openid profile email'
   });
 
