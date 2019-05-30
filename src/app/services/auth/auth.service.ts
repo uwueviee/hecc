@@ -14,7 +14,7 @@ export class AuthService {
     domain: 'noculi.auth0.com',
     responseType: 'token id_token',
     audience: 'https://noculi.auth0.com/userinfo',
-    redirectUri: window.location.protocol+ '//' + window.location.hostname + ':' + window.location.port + '/callback',
+    redirectUri: window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/callback',
     scope: 'openid profile email'
   });
 
@@ -37,12 +37,12 @@ export class AuthService {
         this.isLoggedIn$.next(loggedIn);
         this.router.navigate(['/']);
 	  	this.auth0.client.userInfo(localStorage.getItem("access_token"), (err, userInfo) => {
-	  		if (err) {
-	  			console.log(err);
-	  		} else {
-	  			localStorage.setItem('userInfo', JSON.stringify(userInfo));
-	  		}
-	  	});
+	  	  if (err) {
+	  		console.log(err);
+	  	  } else {
+	  		localStorage.setItem('userInfo', JSON.stringify(userInfo));
+	  	  }
+	    });
       } else if (err) {
         const loggedIn = this.isLoggedIn = false;
         this.isLoggedIn$.next(loggedIn);
