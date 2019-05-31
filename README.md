@@ -13,4 +13,4 @@ Furry RP app made with Ionic
 * Clone this repo
 * Run `npm install`
 * Edit code
-* Run ```ionic serve --port=6680`
+* Run `ionic serve --port=6680` Yes, the 6680 port is necessary as that's what Auth0 is looking for.
