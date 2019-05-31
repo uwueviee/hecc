@@ -12,5 +12,5 @@ Furry RP app made with Ionic
 ## Development
 * Clone this repo
 * Run `npm install`
-* ???
-* Profit!
+* Edit code
+* Run ```ionic serve --port=6680`
